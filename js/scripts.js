@@ -82,13 +82,18 @@ function init() {
 }
 
 //Cria uma pergunta
-
 function createQuestion(i) {
   //Limpar a questão anterior
   const oldButtons = answersBox.querySelectorAll('button');
   oldButtons.forEach(function (btn) {
     btn.remove();
   });
+
+  //Alterar o texto da pergunta
+  const questionText = question.querySelector('#question-text');
+  questionText.textContent = questions[i].question;
+  const questionNumber = question.querySelectorAll('#question-number');
+  questionNumber.textContent = i + 1;
 }
 
 init();
