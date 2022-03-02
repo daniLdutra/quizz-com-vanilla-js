@@ -1,1 +1,77 @@
-console.log('Teste');
+//Declaração de variáveis
+
+const question = document.querySelector('#question');
+const answersBox = document.querySelector('#answers-box');
+const quizzContainer = document.querySelector('#quizz-container');
+const scoreContainer = document.querySelector('#score-container');
+const letters = ['a', 'b', 'c', 'd'];
+let points = 0;
+let actualQuestion = 0;
+
+//Perguntas
+
+const questions = [
+  {
+    question: 'PHP foi desenvolvida para qual fim?',
+    answers: [
+      {
+        answer: 'back-end',
+        correct: true,
+      },
+      {
+        answer: 'front-end',
+        correct: false,
+      },
+      {
+        answer: 'Sistema operacional',
+        correct: false,
+      },
+      {
+        answer: 'Banco de dados',
+        correct: false,
+      },
+    ],
+  },
+  {
+    question: 'Uma foram de declarar variável em JavaScript',
+    answers: [
+      {
+        answer: '$var',
+        correct: false,
+      },
+      {
+        answer: 'var',
+        correct: true,
+      },
+      {
+        answer: '@var',
+        correct: false,
+      },
+      {
+        answer: '#let',
+        correct: false,
+      },
+    ],
+  },
+  {
+    question: 'Qual o seletor de id no CSS?',
+    answers: [
+      {
+        answer: '.',
+        correct: false,
+      },
+      {
+        answer: '@',
+        correct: false,
+      },
+      {
+        answer: '/',
+        correct: false,
+      },
+      {
+        answer: '#',
+        correct: true,
+      },
+    ],
+  },
+];
