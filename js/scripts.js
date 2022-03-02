@@ -117,6 +117,10 @@ function createQuestion(i) {
     //Inserir alternativa na tela
     answersBox.appendChild(answerTemplate);
     //console.log(answerTemplate);
+
+    answerTemplate.addEventListener('click', function () {
+      console.log(this);
+    });
   });
 }
 
