@@ -135,10 +135,18 @@ function checkAnswer(btn) {
   buttons.forEach(function (button) {
     if (button.getAttribute('correct-answer') === 'true') {
       button.classList.add('correct-answer');
+
+      //checa se o usuário acertou a pergunta
+      if (btn === button) {
+        //incremento dos pontos
+        points += 1;
+      }
     } else {
       button.classList.add('wrong-answer');
     }
   });
+
+  console.log(points);
 }
 
 init();
