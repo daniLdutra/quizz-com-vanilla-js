@@ -144,3 +144,20 @@ body {
   background-color: #12c012;
   color: #fff;
 }
+
+/*RESPONSIVO*/
+
+@media (max-width: 450px) {
+  #quizz-container {
+    border: none;
+    width: 100%;
+  }
+
+  #answers-box button {
+    width: 100%;
+  }
+
+  #score-container {
+    width: 90%;
+  }
+}
