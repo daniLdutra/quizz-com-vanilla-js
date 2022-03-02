@@ -104,7 +104,8 @@ function createQuestion(i) {
 
     const letterBtn = answerTemplate.querySelector('.btn-letter'); //selecionada letra
     letterBtn.textContent = letters[i];
-
+    const answerText = answerTemplate.querySelector('.question-answer'); // selecionado texto
+    answerText.textContent = answer['answer'];
     console.log(answerTemplate);
   });
 }
