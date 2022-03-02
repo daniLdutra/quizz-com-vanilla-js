@@ -101,6 +101,10 @@ function createQuestion(i) {
     const answerTemplate = document
       .querySelector('.answer-template')
       .cloneNode(true);
+
+    const letterBtn = answerTemplate.querySelector('.btn-letter'); //selecionada letra
+    letterBtn.textContent = letters[i];
+
     console.log(answerTemplate);
   });
 }
