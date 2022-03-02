@@ -119,8 +119,25 @@ function createQuestion(i) {
     //console.log(answerTemplate);
 
     answerTemplate.addEventListener('click', function () {
-      console.log(this);
+      checkAnswer(this);
     });
+  });
+  //Incrementar o número de questão
+  actualQuestion += 1;
+}
+
+//Verifica resposta do usuário
+function checkAnswer(btn) {
+  //seleciona todos os botões
+  const buttons = answersBox.querySelectorAll('button');
+
+  //verifica se a resposta está correta e adiciona classes ao botões
+  buttons.forEach(function (button) {
+    if (button.getAttribute('correct-answer') === 'true') {
+      button.classList.add('correct-answer');
+    } else {
+      button.classList.add('wrong-answer');
+    }
   });
 }
 
