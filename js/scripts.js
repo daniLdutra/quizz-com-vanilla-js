@@ -109,6 +109,11 @@ function createQuestion(i) {
 
     //Adicionado atributo para alternativa ser correta ou não
     answerTemplate.setAttribute('correct-answer', answer['correct']);
+
+    //Remover hide e template class
+    answerTemplate.classList.remove('hide');
+    answerTemplate.classList.remove('answer-template');
+
     console.log(answerTemplate);
   });
 }
