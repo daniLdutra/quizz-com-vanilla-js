@@ -106,6 +106,9 @@ function createQuestion(i) {
     letterBtn.textContent = letters[i];
     const answerText = answerTemplate.querySelector('.question-answer'); // selecionado texto
     answerText.textContent = answer['answer'];
+
+    //Adicionado atributo para alternativa ser correta ou não
+    answerTemplate.setAttribute('correct-answer', answer['correct']);
     console.log(answerTemplate);
   });
 }
