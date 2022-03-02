@@ -114,7 +114,9 @@ function createQuestion(i) {
     answerTemplate.classList.remove('hide');
     answerTemplate.classList.remove('answer-template');
 
-    console.log(answerTemplate);
+    //Inserir alternativa na tela
+    answersBox.appendChild(answerTemplate);
+    //console.log(answerTemplate);
   });
 }
 
