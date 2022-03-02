@@ -75,3 +75,20 @@ const questions = [
     ],
   },
 ];
+
+// Substituição do quizz para a primeira pergunta
+function init() {
+  createQuestion(0);
+}
+
+//Cria uma pergunta
+
+function createQuestion(i) {
+  //Limpar a questão anterior
+  const oldButtons = answersBox.querySelectorAll('button');
+  oldButtons.forEach(function (btn) {
+    btn.remove();
+  });
+}
+
+init();
