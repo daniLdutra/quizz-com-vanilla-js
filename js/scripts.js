@@ -174,7 +174,7 @@ function showSuccessMesage() {
 
   //calcular score
   const score = ((points / questions.length) * 100).toFixed(2);
-  const displayScore = document.querySelector('#display-score');
+  const displayScore = document.querySelector('#display-score span');
   displayScore.textContent = score.toString();
 }
 
