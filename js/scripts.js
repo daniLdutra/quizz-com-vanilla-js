@@ -157,10 +157,18 @@ function nextQuestion() {
     //verifica se ainda há perguntas
     if (actualQuestion >= questions.length) {
       //apresentar a mensagem de sucesso
+      showSuccessMesage();
+      return;
     }
 
     createQuestion(actualQuestion);
   }, 1500);
+}
+
+//Exibe a tela final
+function showSuccessMesage() {
+  quizzContainer.classList.toggle('hide');
+  scoreContainer.classList.toggle('hide');
 }
 
 init();
