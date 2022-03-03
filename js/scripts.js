@@ -167,8 +167,7 @@ function nextQuestion() {
 
 //Exibe a tela final
 function showSuccessMesage() {
-  quizzContainer.classList.toggle('hide');
-  scoreContainer.classList.toggle('hide');
+  hideOrShowQuizz();
 
   //trocar dados da tela de sucesso
 
@@ -184,6 +183,12 @@ function showSuccessMesage() {
   //alterar o total de perguntas
   const totalQuestions = document.querySelector('#questions-qty');
   totalQuestions.textContent = questions.length;
+}
+
+//Mostra ou esconde score
+function hideOrShowQuizz() {
+  quizzContainer.classList.toggle('hide');
+  scoreContainer.classList.toggle('hide');
 }
 
 init();
