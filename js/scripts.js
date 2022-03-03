@@ -176,6 +176,10 @@ function showSuccessMesage() {
   const score = ((points / questions.length) * 100).toFixed(2);
   const displayScore = document.querySelector('#display-score span');
   displayScore.textContent = score.toString();
+
+  //alterar o numero de perguntas corretas
+  const correctAnswers = document.querySelector('#correct-answers');
+  correctAnswers.textContent = points;
 }
 
 init();
