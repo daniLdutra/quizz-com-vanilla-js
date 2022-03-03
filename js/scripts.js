@@ -33,7 +33,7 @@ const questions = [
     ],
   },
   {
-    question: 'Uma foram de declarar variável em JavaScript',
+    question: 'Uma forma de declarar variável em JavaScript',
     answers: [
       {
         answer: '$var',
@@ -92,7 +92,7 @@ function createQuestion(i) {
   //Alterar o texto da pergunta
   const questionText = question.querySelector('#question-text');
   questionText.textContent = questions[i].question;
-  const questionNumber = question.querySelectorAll('#question-number');
+  const questionNumber = question.querySelector('#question-number');
   questionNumber.textContent = i + 1;
 
   //Insere as alternativas
@@ -123,7 +123,7 @@ function createQuestion(i) {
     });
   });
   //Incrementar o número de questão
-  actualQuestion += 1;
+  actualQuestion++;
 }
 
 //Verifica resposta do usuário
@@ -139,14 +139,28 @@ function checkAnswer(btn) {
       //checa se o usuário acertou a pergunta
       if (btn === button) {
         //incremento dos pontos
-        points += 1;
+        points++;
       }
     } else {
       button.classList.add('wrong-answer');
     }
   });
 
-  console.log(points);
+  // Exibir próxima pergunta
+  nextQuestion();
+}
+
+//Exibie a próxima pergunta no quizz
+function nextQuestion() {
+  //timer para usuario ver as respostas
+  setTimeout(function () {
+    //verifica se ainda há perguntas
+    if (actualQuestion >= questions.length) {
+      //apresentar a mensagem de sucesso
+    }
+
+    createQuestion(actualQuestion);
+  }, 1500);
 }
 
 init();
