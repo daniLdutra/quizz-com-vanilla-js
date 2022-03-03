@@ -180,6 +180,10 @@ function showSuccessMesage() {
   //alterar o numero de perguntas corretas
   const correctAnswers = document.querySelector('#correct-answers');
   correctAnswers.textContent = points;
+
+  //alterar o total de perguntas
+  const totalQuestions = document.querySelector('#questions-qty');
+  totalQuestions.textContent = questions.length;
 }
 
 init();
