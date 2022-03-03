@@ -169,6 +169,13 @@ function nextQuestion() {
 function showSuccessMesage() {
   quizzContainer.classList.toggle('hide');
   scoreContainer.classList.toggle('hide');
+
+  //trocar dados da tela de sucesso
+
+  //calcular score
+  const score = ((points / questions.length) * 100).toFixed(2);
+  const displayScore = document.querySelector('#display-score');
+  displayScore.textContent = score.toString();
 }
 
 init();
